@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Iz Cossarin</title>
+<link rel="shortcut icon" href="Images/Icon.ico" />
+</head> 
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+body, html {
+  height: 100%;
+  color: #777;
+  line-height: 1.8;
+}
+
+/* Create a Parallax Effect */
+.bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4 {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* First image (Logo) */
+.bgimg-1 {
+  background-image: url('Images/Louvre.JPG');
+  min-height: 1000px;
+}
+
+/* Second image (Portfolio) */
+.bgimg-2 {
+  background-image: url("Images/Portfolio.JPG");
+  min-height: 100%
+}
+
+/* Third image (Design) */
+.bgimg-3 {
+  background-image: url("Images/Design.JPG");
+  min-height: 400px;
+}
+
+/* Third image (Contact) */
+.bgimg-4 {
+  background-image: url("Images/Lines.JPG");
+  min-height: 400px;
+}
+
+.w3-wide {letter-spacing: 10px;}
+.w3-hover-opacity {cursor: pointer;}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1600px) {
+   .bgimg-1 {
+    background-attachment: fixed;
+    min-height:600px;
+  }
+
+  .bgimg-2, .bgimg-3, .bgimg-4 {
+    background-attachment: fixed;
+    min-height: 550px;
+  }
+}
+</style>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar" id="myNavbar">
+    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+      <i class="fa fa-bars"></i>
+    </a>
+    <a href="#home" class="w3-bar-item w3-button">HOME</a>
+    <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> PHOTOGRAPHY</a>
+    <a href="#design" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-file"></i> DESIGNS</a>
+    <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
+    </a>
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+    <a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">PORTFOLIO</a>
+     <a href="#designs" class="w3-bar-item w3-button" onclick="toggleFunction()">DESIGNS</a>
+    <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
+  </div>
+</div>
+
+<!-- First Parallax Image with Logo Text -->
+<div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+  <div class="w3-display-middle" style="white-space:nowrap;">
+    <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">IZ <span class="w3-hide-small">COSSARIN</span>
+  </div>
+</div>
+
+<!-- Container (About Section) -->
+<div class="w3-content w3-container w3-padding-64">
+  <h3 class="w3-center">ABOUT ME</h3>
+  <p class="w3-center"><em>Photographer, Designer & Creator</em></p>
+  
+  <div class="w3-row">
+    <div class="w3-col m6 w3-center w3-padding-large">
+      <br>
+      <img src="Images/Me.jpeg" class="w3-round w3-image" alt="Photo of Me" width="500" height="333">
+    </div>
+
+    <!-- Hide this text on small devices -->
+    <div class="w3-col m6 w3-hide-small w3-padding-large">
+      <p>I am a photographer, graphic designer, programmer, creator and future engineer. I adapt my broad range of skills to everything from web design, photography, 3D printing and video creation. Throughout high school, I lead and The Alpha Dogs media team, managing all the photography, videography and publications from the team. All of my experience has given me the skills to manage large projects, work in teams, delegate work and manage a team. </p>
+    </div>
+  </div>
+
+</div>
+</div>
+
+<!-- Second Parallax Image with Portfolio Text -->
+<div class="bgimg-2 w3-display-container w3-opacity-min" id="portfolio">
+  <div class="w3-display-middle">
+    <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">PHOTOGRAPHY</span>
+  </div>
+</div>
+
+<!-- Container (Portfolio Section) -->
+<div class="w3-content w3-container w3-padding-64">
+  <h3 class="w3-center">MY WORK</h3>
+  <p class="w3-center w3-small"><em>Click to enlarge images.</em></p><br>
+
+  <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
+  <div class="w3-row-padding w3-center">
+    <div class="w3-col m3">
+      <img src="Images/Museum.JPG" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Museum, Quebec">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="Images/Tower.JPG" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Light Tower, Ontario">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="Images/Corn.JPG" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Corn Field, Ontario">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="Images/The Lake.JPG" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Maligne Lake, Alberta">
+    </div>
+  </div>
+
+  <div class="w3-row-padding w3-center w3-section">
+    <div class="w3-col m3">
+      <img src="Images/Lights.JPG" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Christmas Lights, Ontario">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="Images/Street.JPG" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A Street, France">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="Images/Rain.jpeg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="The Yellow Raincoat, Iceland">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="Images/Rocks.JPG" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Rock Wall, Alberta">
+    </div>
+  </div>
+    
+    <div class="w3-row-padding w3-center w3-section">
+     <div class="w3-col m3">
+      <img src="Images/Sunny.jpeg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Sunny Days, Ontario">
+    </div>
+    
+    <div class="w3-col m3">
+      <img src="Images/Dress.JPG" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Wedding Dress, France">
+    </div>
+    
+    <div class="w3-col m3">
+      <img src="Images/Chirp.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Hungry Birdy, Ontario">
+    </div>
+    
+    <div class="w3-col m3">
+      <img src="Images/Blossoms.JPG" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Spring Blossoms, Ontario">
+    </div>
+   </div>
+ </div>
+</div>
+
+<!-- Modal for full size images on click-->
+<div id="modal01" class="w3-modal w3-black-opacity" onclick="this.style.display='none'">
+  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+    <img id="img01" class="w3-image">
+  </div>
+</div>
+
+<!-- Third Parallax Image with Designs Text -->
+<div class="bgimg-3 w3-display-container w3-opacity-min" id="design">
+  <div class="w3-display-middle" style="white-space:nowrap;">
+    <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">DESIGNS</span>
+  </div>
+</div>
+
+<!-- Container (Design Section) -->
+<div class="w3-content w3-container w3-padding-64">
+  <h3 class="w3-center">PROJECTS</h3>
+  <br>
+   <div class="w3-row-padding w3-padding-32" style="margin:0 -16px">
+        <div class="w3-third w3-margin-bottom">
+          <img src="Images/Trailer.JPG" alt="Alpha Dogs Trailer" style="width:100%">
+          <div class="w3-container w3-light-grey">
+            <p><b>Alpha Dogs Branding</b></p>
+            <p class="w3-opacity">Over a two year period as media lead I managed, the marketing, the media produced by FRC Team 4946 - The Alpha Dogs.</p>
+            <a href="https://4946.ca/" target="_blank" class="w3-button w3-round w3-dark-grey w3-margin-bottom">More Info</a>
+          </div>
+        </div>
+        <div class="w3-third w3-margin-bottom">
+          <img src="Images/Blossoms.png" alt="Chrome Themes" style="width:100%">
+          <div class="w3-container w3-light-grey">
+            <p><b>Chrome Themes</b></p>
+            <p class="w3-opacity">I turned some of my best photos into chrome web themes. </p>
+            <a href="https://chrome.google.com/webstore/search/Iz%20Cossarin" target="_blank" class="w3-button w3-round w3-dark-grey w3-margin-bottom">More Info</a>
+          </div>
+        </div>
+        <div class="w3-third w3-margin-bottom">
+          <img src="Images/Web Design.png" alt="San Francisco" style="width:100%">
+          <div class="w3-container w3-light-grey">
+            <p><b>Web Design</b></p>
+            <p class="w3-opacity">Yep, you're already stuck in one of my designs. Please enjoy. </p>
+            <a href="#home" target="_blank" class="w3-button w3-round w3-dark-grey w3-margin-bottom">More Info</a>
+          </div>
+        </div>
+     </div>
+</div>
+
+<!-- Fourth Parallax Image with Contact Text -->
+<div class="bgimg-4 w3-display-container w3-opacity-min" id="contact">
+  <div class="w3-display-middle" style="white-space:nowrap;">
+     <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">CONTACT</span>
+  </div>
+</div>
+
+<!-- Container (Contact Section) -->
+<div class="w3-content w3-container w3-padding-64">
+
+  
+  <div class="w3-row w3-padding-32 w3-center">
+    <div class="w3-col m4 w3-container w3-center">
+      <img src="Images/Palgrave.JPG" class="w3-image w3-round w3-center" style="width:125%">
+    </div>
+    <div class="w3-col m8 w3-panel">
+      <div class="w3-large w3-margin-bottom">
+        <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Ontario, Canada<br>
+        <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone: +1 647 297 7782<br>
+        <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: icossarin@gmail.com<br>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-dark-grey w3-padding-64 w3-opacity w3-hover-opacity-off">
+  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  <div class="w3-xxlarge w3-section">
+    <a class="fa fa-instagram w3-hover-opacity w3-button" href="https://www.instagram.com/iz.cossarin/?hl=en" target="-blank"></a>
+    <a class="fa fa-linkedin w3-hover-opacity w3-button" href="https://www.linkedin.com/in/izzy-cossarin/" target="-blank"></a>
+  </div>
+  <p>Designed by Iz Cossarin</p>
+</footer>
+ 
+<script>
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+// Change style of navbar on scroll
+window.onscroll = function() {myFunction()};
+function myFunction() {
+    var navbar = document.getElementById("myNavbar");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+    } else {
+        navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+    }
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function toggleFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+</script>
+
+</body>
+</html>
